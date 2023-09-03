@@ -18,7 +18,7 @@ app.use(function (request, response, next) {
   next();
 });
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://blogbackend-ks9r.onrender.com', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
