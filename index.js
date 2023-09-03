@@ -8,9 +8,16 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 app.use("/images",express.static(path.join(__dirname,"/images")));
 
 mongoose.connect(process.env.MONGO_URL,
