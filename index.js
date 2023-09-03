@@ -26,6 +26,7 @@ app.use(express.json());
 //     optionSuccessStatus:200
 // }
 // app.use(cors(corsOptions));
+@Crossorigin
 app.use("/images",express.static(path.join(__dirname,"/images")));
 
 mongoose.connect(process.env.MONGO_URL,
